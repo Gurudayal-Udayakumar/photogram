@@ -26,7 +26,7 @@ else{
       <label for="floatingInput">Username</label>
     </div>
     <div class="form-floating">
-      <input name = "phone" type="phone" class="form-control" id="floatingInputnumber" placeholder="name@example.com" >
+      <input name = "phone" type="phone" class="form-control" id="floatingInputnumber" placeholder="0123456789" >
       <label for="floatingInput">Phone</label>
     </div>
     <div class="form-floating">

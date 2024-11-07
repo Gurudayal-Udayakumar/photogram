@@ -1,24 +1,41 @@
-<?
-$username = $_POST['email_address'];
-$password = $_POST['password'];
-
-$result = validate_credentials($username,$password);
-if($result){
+<?php
+$signup = false;
+if(isset($_POST['username']) and isset($_POST['password']) and isset($_POST['email_address']) and isset($_POST['phone'])){
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+  $email = $_POST['email_address'];
+  $phone = $_POST['phone'];
+  $error = signup($username,$password,$email,$phone);
+  $signup = true;
+}
 ?>
-<main class="flex-shrink-0">
+<?php
+  if($signup){
+    if(!$error){
+      ?>
+        <main class="flex-shrink-0">
   <div class="container">
-    <h1 class="mt-5">Login successful</h1>
-    <p class="lead">This is an example to check wheather login is successful.</p>
+    <h1 class="mt-5">Signup successful</h1>
+    <p class="lead">Now you can login from <a href = "/login.php">here</a>.</p>
   </div>
 </main>
-<?
-}
+  <?php
+    }
+    else{
+  ?>
+<main class="flex-shrink-0">
+  <div class="container">
+    <h1 class="mt-5">Signup failed</h1>
+    <p class="lead">Something went wrong <?=$error?></p>
+  </div>
+</main>
 
-else{
-?>
-
+<?php
+    }
+  }else{
+    ?>
 <main class="form-signup w-100 m-auto">
-  <form method = "post" action = "test.php">
+  <form method = "post" action = "signup.php">
     <h1 class="h3 mb-3 fw-normal">Signup here</h1>
 
     <div class="form-floating">
@@ -49,6 +66,6 @@ else{
   </form>
 </main>
 
-<?
+<?php
   }
 ?>

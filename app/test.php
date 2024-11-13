@@ -5,6 +5,7 @@
 
 
 include 'libs/load.php';
+
 //print("SERVER\n");
 //print_r($_SERVER);
 //print("GET\n");
@@ -15,11 +16,26 @@ include 'libs/load.php';
 //print_r($_COOKIE);
 //print_r("FILE\n");
 //print_r($_FILES);
-if(signup("gurudayal" , "password" , "guru@gmail.com" , "9")){
-    echo "Success";
-}
-else{
-    echo "Fail";
-}
+// if(signup("gurudayal" , "password" , "guru@gmail.com" , "9")){
+//     echo "Success";
+// }
+// else{
+//     echo "Fail";
+// }
+
+$mic1 = new Mic();
+$mic2 = new Mic();
+
+$mic1->brand = "jbl";
+$mic2->brand = "boat";
+
+$mic1->light = "green";
+$mic2->light = "blue";
+$mic1->setLight("white");
+$mic2->setLight("yellow");
+
+
+
+
 ?>
 </pre>

@@ -9,6 +9,7 @@ include 'libs/load.php';
 
 
 <!doctype html>
+<?load_template("_head");?>
 <html lang="en" data-bs-theme="auto">
   <head><script src="/app/assets/js/color-modes.js"></script>
 

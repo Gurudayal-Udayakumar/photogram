@@ -23,8 +23,8 @@ include 'libs/load.php';
 //     echo "Fail";
 // }
 
-$mic1 = new Mic();
-$mic2 = new Mic();
+$mic1 = new Mic("Roda");
+$mic2 = new Mic("HyperX");
 
 $mic1->brand = "jbl";
 $mic2->brand = "boat";
@@ -34,6 +34,8 @@ $mic2->light = "blue";
 $mic1->setLight("white");
 $mic2->setLight("yellow");
 
+$mic1->setModel("hypercast");
+print("Model of 1st mic is ".$mic1->getModel());
 
 
 

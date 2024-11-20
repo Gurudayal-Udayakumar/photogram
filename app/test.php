@@ -26,6 +26,8 @@ include 'libs/load.php';
 $mic1 = new Mic("Roda");
 $mic2 = new Mic("HyperX");
 
+Mic::testFunction();
+
 $mic1->brand = "jbl";
 $mic2->brand = "boat";
 
@@ -36,6 +38,7 @@ $mic2->setLight("yellow");
 
 $mic1->setModel("hypercast");
 print("Model of 1st mic is ".$mic1->getModel());
+
 
 
 

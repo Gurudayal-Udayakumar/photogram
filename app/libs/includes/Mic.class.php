@@ -3,10 +3,17 @@
 class Mic{
     private $brand;
     public $color;
-    public $usb_port;
+    public $usb_port;  
     public $model;
     public $light;
     public $price;
+
+
+    public static function testFunction(){
+        print("this is a test function and it can be called without creating an object 
+        using :: symbol,there is no construction and destruction for this function");
+    }
+
 
     public function __construct($brand){
         print("constructing....");
@@ -23,5 +30,9 @@ class Mic{
 
     public function setModel($model){
         $this->model = ucwords($model);
+    }
+
+    public function __destruct(){
+        print("destructing...");
     }
 }

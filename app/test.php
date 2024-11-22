@@ -1,7 +1,7 @@
 
 
 
-<pre><?
+<pre><?php
 
 
 include 'libs/load.php';
@@ -27,6 +27,11 @@ $mic1 = new Mic("Roda");
 $mic2 = new Mic("HyperX");
 
 Mic::testFunction();
+print("\n");
+$conn = Database::getConnection();
+print("\n");
+
+
 
 $mic1->brand = "jbl";
 $mic2->brand = "boat";
@@ -40,7 +45,6 @@ $mic1->setModel("hypercast");
 print("Model of 1st mic is ".$mic1->getModel());
 
 
-
-
 ?>
 </pre>
+this is regular font

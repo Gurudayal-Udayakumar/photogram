@@ -21,11 +21,11 @@ if(isset($_SESSION['a'])){
 }
 
 
-// if(isset($_GET['destroy'])){
-//     printf("destroying....\n");
-//     session_destroy();
+if(isset($_GET['destroy'])){
+    printf("destroying....\n");
+    session_destroy();
 
-// }
+}
 
 
 print_r("_SERVER");

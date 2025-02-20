@@ -4,10 +4,11 @@
 
 class User{
     private $conn;
+    private static $salt = "randomcharacters";
     public static function signup($user,$pass,$email,$phone)
     {
 
-      $pass = md5($pass);
+      $pass = md5(strrev(md5($pass))).User::$salt;
     
       $conn = Database::getConnection();
         
@@ -27,7 +28,7 @@ class User{
     }
 
     public static function login($user,$pass){
-      $pass = md5($pass);
+      $pass = md5(strrev(md5($pass))).User::$salt;
       $query = "SELECT * FROM `auth` WHERE `username` = 'hari'";
       $conn = Database::getConnection();
       $result = $conn->query($query);

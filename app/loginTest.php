@@ -18,7 +18,7 @@ if(Session::get('is_loggedin')){
     $result = $userdata;
 }else{
     printf("No session found , try login now.");
-    $result = User::login($use,$pass);
+    $result = User::login($user,$pass);
     if($result){
         echo"Login successful ,$result[username]";
         Session::set('is_loggedin',true);
